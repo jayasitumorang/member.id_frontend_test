@@ -54,13 +54,11 @@ class Display extends Component {
         
         
         <div ref="resultDisplay" className="resultDisplay">
-        <div id="texts" style={{ padding: "1em 5.2em", justifyContent:"left",display: "inline", whiteSpace: "nowrap" }}>
-        <strong> = </strong>
-       </div>
-          {result.toString().length > 10
-            ? result.toPrecision(4)
-            : this.formatNumber(result)}
-        </div>
+        <p style={{ float: "left"}}><strong>=</strong></p>
+        <p style={{ float: "right"}}>{result.toString().length > 10
+              ? result.toPrecision(4)
+              : this.formatNumber(result)}</p>
+          </div>
       </div>
       
     );
@@ -71,5 +69,4 @@ const mapStateToProps = state => ({
   calculation: state.calculation,
   result: state.result
 });
-
 export default connect(mapStateToProps)(Display);

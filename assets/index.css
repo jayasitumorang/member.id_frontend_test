@@ -13,7 +13,7 @@ html {
   margin: auto;
   border-radius: 0%;
   width: 342px;
-  height: 542px;
+  height: 590px;
   padding: 25px;
   border: 1px solid rgb(76, 98, 247);
   box-sizing: border-box;
@@ -88,6 +88,25 @@ button.calc-input.equal {
 
 .calculationDisplay,
 .resultDisplay {
+  padding-bottom: 10px;
   overflow: hidden;
   white-space: nowrap;
+}
+.left {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.a {
+  width:200px;
+  border:solid 1px #ccc;
+}
+.b {
+  width:100px;
+  border:solid 1px #ccc;
+}
+.c {
+  width:100%;
+  max-width:100px;
 }
